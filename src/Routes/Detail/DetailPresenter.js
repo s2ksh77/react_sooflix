@@ -69,6 +69,23 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const LinkButton = styled.span`
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #000000;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-size: 12px;
+  line-height: 1.25;
+  border-radius: 0.25rem;
+  transition: all 0.15s ease-in-out;
+  margin: 0 10px;
+`;
+const Link = styled.a``;
+
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
     <>
@@ -121,6 +138,18 @@ const DetailPresenter = ({ result, loading, error }) =>
                     : `${genre.name} / `
                 )}
             </Item>
+            <LinkButton>
+              <Link
+                href={
+                  result.imdb_id
+                    ? `https://www.imdb.com/title/${result.imdb_id}`
+                    : `${result.homepage}`
+                }
+                target="_blank"
+              >
+                IMDB
+              </Link>
+            </LinkButton>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
         </Data>
