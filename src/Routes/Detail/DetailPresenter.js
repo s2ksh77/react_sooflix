@@ -216,7 +216,7 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Countries>
           </DetailTabContainer>
           <CollectionContainer>
-            {result.belongs_to_collection && (
+            {result.belongs_to_collection ? (
               <Collection
                 key={result.belongs_to_collection.id}
                 id={result.belongs_to_collection.id}
@@ -225,6 +225,18 @@ const DetailPresenter = ({ result, loading, error }) =>
                 imageUrl={result.belongs_to_collection.poster_path}
                 isCollection={true}
               />
+            ) : (
+              result.seasons &&
+              result.seasons.map((season) => (
+                <Collection
+                  key={season.id}
+                  id={season.id}
+                  title={season.name}
+                  year={season.air_date}
+                  imageUrl={season.poster_path}
+                  isCollection={true}
+                />
+              ))
             )}
           </CollectionContainer>
         </Data>

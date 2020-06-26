@@ -73,7 +73,7 @@ const Collection = ({
 Collection.propTypes = {
   id: PropTypes.number.isRequired,
   imageUrl: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   release_date: PropTypes.string,
   title: PropTypes.string,
   isCollection: PropTypes.bool,
