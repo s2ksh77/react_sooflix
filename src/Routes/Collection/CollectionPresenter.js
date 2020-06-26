@@ -42,7 +42,7 @@ const CollectionPresenter = ({ result, loading, error }) => (
 );
 
 CollectionPresenter.propTypes = {
-  collection: PropTypes.object,
+  result: PropTypes.object,
   loading: PropTypes.bool.isRequired,
   error: PropTypes.string,
 };
