@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Helmet from "react-helmet";
 import Loader from "../../Components/Loader";
+import Collection from "../../Components/Collection";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -84,7 +85,46 @@ const LinkButton = styled.span`
   transition: all 0.15s ease-in-out;
   margin: 0 10px;
 `;
-const Link = styled.a``;
+const Link = styled.a`
+  display: block;
+`;
+
+const DetailTabContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-gap: 25px;
+  margin-top: 25px;
+  height: auto;
+`;
+
+const Youtube = styled.div`
+  width: 50px;
+  height: 50px;
+  background-image: url(${(props) => props.bgUrl});
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+`;
+
+const Company = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Countries = styled.p`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const CollectionContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-gap: 25px;
+  margin-top: 25px;
+  height: auto;
+`;
 
 const DetailPresenter = ({ result, loading, error }) =>
   loading ? (
@@ -152,6 +192,41 @@ const DetailPresenter = ({ result, loading, error }) =>
             </LinkButton>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+          <DetailTabContainer>
+            <Youtube bgUrl={require("../../assets/youtube-brands.png")}>
+              <Link
+                href={
+                  result.videos
+                    ? `https://www.youtube.com/watch?v=${result.videos.results[0].key}`
+                    : `https://www.youtube.com/watch?v=${result.videos.results[0].key}`
+                }
+                target="_blank"
+                style={{ height: "100%" }}
+              />
+            </Youtube>
+            <Company style={{ lineHeight: "2" }}>
+              {result.production_companies.length > 0
+                ? result.production_companies.map((company) => company.name)
+                : ""}
+            </Company>
+            <Countries>
+              {result.production_countries
+                ? result.production_countries[0].name
+                : ""}
+            </Countries>
+          </DetailTabContainer>
+          <CollectionContainer>
+            {result.belongs_to_collection && (
+              <Collection
+                key={result.belongs_to_collection.id}
+                id={result.belongs_to_collection.id}
+                title={result.belongs_to_collection.name}
+                year={result.belongs_to_collection.release_date}
+                imageUrl={result.belongs_to_collection.poster_path}
+                isCollection={true}
+              />
+            )}
+          </CollectionContainer>
         </Data>
       </Content>
     </Container>
