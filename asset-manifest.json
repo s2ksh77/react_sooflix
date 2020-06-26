@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/react_sooflix/static/js/main.468031b9.chunk.js",
-    "main.js.map": "/react_sooflix/static/js/main.468031b9.chunk.js.map",
-    "runtime-main.js": "/react_sooflix/static/js/runtime-main.9c4c1be2.js",
-    "runtime-main.js.map": "/react_sooflix/static/js/runtime-main.9c4c1be2.js.map",
-    "static/js/2.e6167856.chunk.js": "/react_sooflix/static/js/2.e6167856.chunk.js",
-    "static/js/2.e6167856.chunk.js.map": "/react_sooflix/static/js/2.e6167856.chunk.js.map",
-    "index.html": "/react_sooflix/index.html",
-    "precache-manifest.ad020cebefc94c16390d64ee953cbc39.js": "/react_sooflix/precache-manifest.ad020cebefc94c16390d64ee953cbc39.js",
-    "service-worker.js": "/react_sooflix/service-worker.js",
-    "static/js/2.e6167856.chunk.js.LICENSE.txt": "/react_sooflix/static/js/2.e6167856.chunk.js.LICENSE.txt",
-    "static/media/youtube-brands.png": "/react_sooflix/static/media/youtube-brands.55334933.png"
+    "main.js": "/static/js/main.468031b9.chunk.js",
+    "main.js.map": "/static/js/main.468031b9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6595109c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6595109c.js.map",
+    "static/js/2.82cb851a.chunk.js": "/static/js/2.82cb851a.chunk.js",
+    "static/js/2.82cb851a.chunk.js.map": "/static/js/2.82cb851a.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.9b8d7d6edec153a89351005a17fd1d24.js": "/precache-manifest.9b8d7d6edec153a89351005a17fd1d24.js",
+    "service-worker.js": "/service-worker.js",
+    "static/js/2.82cb851a.chunk.js.LICENSE.txt": "/static/js/2.82cb851a.chunk.js.LICENSE.txt",
+    "static/media/youtube-brands.png": "/static/media/youtube-brands.55334933.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.9c4c1be2.js",
-    "static/js/2.e6167856.chunk.js",
+    "static/js/runtime-main.6595109c.js",
+    "static/js/2.82cb851a.chunk.js",
     "static/js/main.468031b9.chunk.js"
   ]
 }
