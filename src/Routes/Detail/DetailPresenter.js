@@ -196,9 +196,9 @@ const DetailPresenter = ({ result, loading, error }) =>
             <Youtube bgUrl={require("../../assets/youtube-brands.png")}>
               <Link
                 href={
-                  result.videos
+                  result.videos && result.videos.results.length > 0
                     ? `https://www.youtube.com/watch?v=${result.videos.results[0].key}`
-                    : `https://www.youtube.com/watch?v=${result.videos.results[0].key}`
+                    : ``
                 }
                 target="_blank"
                 style={{ height: "100%" }}
