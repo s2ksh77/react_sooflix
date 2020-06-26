@@ -28,7 +28,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "https://s2ksh77.github.io/react_sooflix",
+  "homepage": "https://elated-tesla-c44afd.netlify.app",
   "browserslist": {
     "production": [
       ">0.2%",
