@@ -1,6 +1,6 @@
 import React from "react";
 import CollectionPresenter from "./CollectionPresenter";
-import { collectionApi } from "api";
+import { collectionApi } from "../../api";
 
 export default class extends React.Component {
   constructor(props) {
