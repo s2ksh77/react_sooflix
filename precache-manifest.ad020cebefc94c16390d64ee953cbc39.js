@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4467e8dc0a313d388485cd399430410a",
+    "revision": "c8421e80978881c1e227d5ddb0692b07",
     "url": "/react_sooflix/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react_sooflix/static/js/2.e6167856.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d7bd5893709d13cb604",
-    "url": "/react_sooflix/static/js/main.8c0817c5.chunk.js"
+    "revision": "d1ad71c17553fabbe51e",
+    "url": "/react_sooflix/static/js/main.468031b9.chunk.js"
   },
   {
     "revision": "67a5eb156b0aa4872d66",
